@@ -1,0 +1,7 @@
+* text=auto
+*.cs text=crlf
+*.csproj text=crlf
+*.sln text=crlf
+*.resx text=crlf
+App.config text=crlf
+Settings.settings text=crlf
