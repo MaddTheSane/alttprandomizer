@@ -43,9 +43,8 @@ namespace AlttpRandomizer.Net
                 if (match.Success)
                 {
                     var currentVersion = match.Groups["version"].Value;
-                    int currentVersionNum;
 
-                    if (int.TryParse(currentVersion, out currentVersionNum))
+                    if (int.TryParse(currentVersion, out int currentVersionNum))
                     {
                         if (checkVersion < currentVersionNum)
                         {

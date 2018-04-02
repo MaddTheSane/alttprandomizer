@@ -2496,26 +2496,24 @@ namespace AlttpRandomizer.Rom
                         (rom, item) =>
                         {
                             var itemType = ((InventoryItem)item).Type;
-
-                            if (itemType == InventoryItemType.Bombos)
-                            {
+                            switch(itemType ){
+                            case InventoryItemType.Bombos:
                                 rom.WriteBytes(0x4FF2, 0x31);
                                 rom.WriteBytes(0x50D1, 0x80);
                                 rom.WriteBytes(0x51B0, 0x00);
                                 rom.WriteBytes(0x180022, 0x00);
-                            }
-                            else if (itemType == InventoryItemType.Ether)
-                            {
+                                break;
+                            case InventoryItemType.Ether:
                                 rom.WriteBytes(0x180022, 0x01);
-                            }
-                            else if (itemType == InventoryItemType.Quake)
-                            {
+                                break;
+                            case InventoryItemType.Quake:
                                 rom.WriteBytes(0x4FF2, 0x31);
                                 rom.WriteBytes(0x50D1, 0x88);
                                 rom.WriteBytes(0x51B0, 0x00);
                                 rom.WriteBytes(0x180022, 0x02);
-                            }
+                                break;
                         }
+                    }
                 },
                 new Location
                 {
@@ -2524,26 +2522,24 @@ namespace AlttpRandomizer.Rom
                         (rom, item) =>
                         {
                             var itemType = ((InventoryItem)item).Type;
-
-                            if (itemType == InventoryItemType.Bombos)
-                            {
+                            switch(itemType ){
+                            case InventoryItemType.Bombos:
                                 rom.WriteBytes(0x5020, 0x31);
                                 rom.WriteBytes(0x50FF, 0x90);
                                 rom.WriteBytes(0x51DE, 0x00);
                                 rom.WriteBytes(0x180023, 0x00);
-                            }
-                            else if (itemType == InventoryItemType.Ether)
-                            {
+                                break;
+                            case InventoryItemType.Ether:
                                 rom.WriteBytes(0x5020, 0x31);
                                 rom.WriteBytes(0x50FF, 0x98);
                                 rom.WriteBytes(0x51DE, 0x00);
                                 rom.WriteBytes(0x180023, 0x01);
-                            }
-                            else if (itemType == InventoryItemType.Quake)
-                            {
+                                break;
+                            case InventoryItemType.Quake:
                                 rom.WriteBytes(0x180023, 0x02);
-                            }
+                                break;
                         }
+                    }
                 },
                 new Location
                 {

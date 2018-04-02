@@ -511,7 +511,7 @@ namespace AlttpRandomizer
             {
                 case "Casual":
                     bulkCreate.Enabled = true;
-                    if (seed.Text.ToUpper().StartsWith("G"))
+                    if (seed.Text.ToUpper().StartsWith("G", StringComparison.Ordinal))
                     {
                         seed.Text = seed.Text.ToUpper().Replace('G', 'C');
                     }
@@ -522,7 +522,7 @@ namespace AlttpRandomizer
                     break;
                 case "Glitched":
                     bulkCreate.Enabled = true;
-                    if (seed.Text.ToUpper().StartsWith("C"))
+                    if (seed.Text.ToUpper().StartsWith("C", StringComparison.Ordinal))
                     {
                         seed.Text = seed.Text.ToUpper().Replace('C', 'G');
                     }
@@ -540,14 +540,14 @@ namespace AlttpRandomizer
 
         private void seed_TextChanged(object sender, EventArgs e)
         {
-            if(seed.Text.ToUpper().StartsWith("C"))
+            if(seed.Text.ToUpper().StartsWith("C", StringComparison.Ordinal))
             {
                 if (randomizerDifficulty.SelectedItem.ToString() != "Casual")
                 {
                     randomizerDifficulty.SelectedItem = "Casual";
                 }
             }
-            else if (seed.Text.ToUpper().StartsWith("G"))
+            else if (seed.Text.ToUpper().StartsWith("G", StringComparison.Ordinal))
             {
                 if (randomizerDifficulty.SelectedItem.ToString() != "Glitched")
                 {
